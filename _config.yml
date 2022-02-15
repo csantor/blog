@@ -2,8 +2,8 @@ title:
 email:              
 description:        
 author:             
-baseurl:            "/blog"
-url:                "https://csantor.github.io"
+baseurl:            ""
+url:                ""
 
 # Social Profiles
 twitter_username:   
