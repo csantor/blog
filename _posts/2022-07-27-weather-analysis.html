@@ -1140,7 +1140,7 @@ background: '/img/posts/06.jpg'
 | The full license is in the file LICENSE, distributed with this software.
 |----------------------------------------------------------------------------*/
 
-        @charset "UTF-8";
+        /*@charset "UTF-8";
 
         /*!
 
@@ -15361,7 +15361,7 @@ better solution to this problem.
             white-space: nowrap;
         }
 
-        .CodeMirror-linenumbers {}
+        
 
         .CodeMirror-linenumber {
             padding: 0 3px 0 5px;
@@ -15449,7 +15449,7 @@ better solution to this problem.
         }
 
         /* Can style cursor different in overwrite (non-insert) mode */
-        .CodeMirror-overwrite .CodeMirror-cursor {}
+        
 
         .cm-tab {
             display: inline-block;
@@ -15523,10 +15523,7 @@ better solution to this problem.
             color: #00f;
         }
 
-        .cm-s-default .cm-variable,
-        .cm-s-default .cm-punctuation,
-        .cm-s-default .cm-property,
-        .cm-s-default .cm-operator {}
+        
 
         .cm-s-default .cm-variable-2 {
             color: #05a;
@@ -15773,7 +15770,7 @@ better solution to this problem.
             /* Force widget margins to stay inside of the container */
         }
 
-        .CodeMirror-widget {}
+        
 
         .CodeMirror-rtl pre {
             direction: rtl;
@@ -17250,8 +17247,6 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 
         .cm-s-solarized {
             line-height: 1.45em;
-            color-profile: sRGB;
-            rendering-intent: auto;
         }
 
         .cm-s-solarized.cm-s-dark {
@@ -17679,9 +17674,7 @@ THE SOFTWARE.
             color: black;
         }
 
-        .cm-s-xq-light span.cm-property {}
-
-        .cm-s-xq-light span.cm-operator {}
+        
 
         .cm-s-xq-light span.cm-comment {
             color: #0080FF;
@@ -18465,9 +18458,7 @@ THE SOFTWARE.
         }
 
         /* ...or leave it untouched if they don't */
-        [data-jp-theme-light='false'] .jp-RenderedImage img.jp-needs-dark-background {}
-
-        [data-jp-theme-light='true'] .jp-RenderedImage img.jp-needs-light-background {}
+        
 
         .jp-RenderedHTMLCommon img,
         .jp-RenderedImage img,
@@ -18881,7 +18872,7 @@ THE SOFTWARE.
 | Private CSS variables
 |----------------------------------------------------------------------------*/
 
-        :root {}
+        
 
         /*-----------------------------------------------------------------------------
 | Main OutputArea
@@ -20190,26 +20181,26 @@ all of MD as it is not optimized for dense, information rich UIs.
                         src="{{site.baseurl}}/img/posts/weather-assignment/NOAA_search_3.png"
                         alt="image_of_NOAA_search_page"><br></li>
                 <li>Next we add the dataset to the cart<br>
-                    <img src="/images/weather_assignment/NOAA_search_4.png" alt="image_of_NOAA_search_page"><br>
+                    <img src="{{site.baseurl}}/img/posts/weather-assignment/NOAA_search_4.png" alt="image_of_NOAA_search_page"><br>
                 </li>
                 <li>In the cart options we select csv format and the date range for which we want to collect the
                     data<br>
-                    <img src="images/NOAA_search_5.png" alt="image_of_NOAA_search_page"><br>
+                    <img src="{{site.baseurl}}/img/posts/weather-assignment/NOAA_search_5.png" alt="image_of_NOAA_search_page"><br>
                 </li>
                 <li>At the custom options we select the fields we want to have in our dataset and the units of our data
                     (metric). For our case we should only select data about temperature and precipitation, but I select
                     all the fields just to be safe<br>
-                    <img src="images/NOAA_search_6.png" alt="image_of_NOAA_search_page"><br>
+                    <img src="{{site.baseurl}}/img/posts/weather-assignment/NOAA_search_6.png" alt="image_of_NOAA_search_page"><br>
                 </li>
                 <li>In the page that loads we can confirm our selections and place our order by inputting a valid email
                     address. It's safe to input a personal or business email address here as NOAA will use the email
                     address for the sole purpose of communicating the order status to us.
-                    <img src="images/NOAA_search_7.png" alt="image_of_NOAA_search_page"><br>
+                    <img src="{{site.baseurl}}/img/posts/weather-assignment/NOAA_search_7.png" alt="image_of_NOAA_search_page"><br>
                 </li>
                 <li>After submitting the request we are informed that the order is complete and get various information
                     about the dataset. After a couple of minutes we receive a link to our email with the dataset or we
                     can check order status and the download link will be there.
-                    <img src="images/NOAA_search_8.png" alt="image_of_NOAA_search_page"><br>
+                    <img src="{{site.baseurl}}/img/posts/weather-assignment/NOAA_search_8.png" alt="image_of_NOAA_search_page"><br>
                 </li>
             </ol>
             <p>We have two options here. We can use the download link to connect to the csv online (although it expires
@@ -21790,21 +21781,21 @@ dtype: int64</pre>
         </div>
         <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
             <p>While trying to find the average I got this error:
-                <img src="images/unsupported_operand.png" alt="unsupported_operand">
+                <img src="{{site.baseurl}}/img/posts/weather-assignment/unsupported_operand.png" alt="unsupported_operand">
                 I didn't expect to get an error here and I started searching for the issue as I thought that everything
                 I had was numbers.
                 Running df_TEMP_PRCP.dtypes got me:
-                <img src="images/dtypes.png" alt="wrong_types">
+                <img src="{{site.baseurl}}/img/posts/weather-assignment/dtypes.png" alt="wrong_types">
                 I had seen that I had only float64 objects in df_TEMP_PRCP at the start so the problem should have been
                 in df_hds_TEMP_PRCP. Indeed, there the temperatures were objects and not float64 and when I tried to
                 convert them got this error message:
-                <img src="images/convert_error.png" alt="convert_error">
+                <img src="{{site.baseurl}}/img/posts/weather-assignment/convert_error.png" alt="convert_error">
                 Ok, that was unexpected. There were some dashes in the data in some columns and I didn't find them as
                 they are not considered na.
                 I located these rows.
-                <img src="images/locate_rows.png" alt="locate_rows">
+                <img src="{{site.baseurl}}/img/posts/weather-assignment/locate_rows.png" alt="locate_rows">
                 Then checked in the first dataset, if I have any values for them.
-                <img src="images/located_rows_1st_df.png" alt="located_rows_1st_df">
+                <img src="{{site.baseurl}}/img/posts/weather-assignment/located_rows_1st_df.png" alt="located_rows_1st_df">
                 I had in the two of the three rows, so here I choose to drop them and move on with my analysis.
             </p>
 
@@ -22573,40 +22564,7 @@ dtype: int64</pre>
         </div>
 
     </div>
-    <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-        <div class="jp-Cell-inputWrapper">
-            <div class="jp-InputArea jp-Cell-inputArea">
-                <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-                <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                    <div class="CodeMirror cm-s-jupyter">
-                        <div class=" highlight hl-ipython3">
-                            <pre><span></span> 
-</pre>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-        <div class="jp-Cell-inputWrapper">
-            <div class="jp-InputArea jp-Cell-inputArea">
-                <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-                <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                    <div class="CodeMirror cm-s-jupyter">
-                        <div class=" highlight hl-ipython3">
-                            <pre><span></span> 
-</pre>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputPrompt jp-InputArea-prompt">
         </div>
@@ -22618,10 +22576,10 @@ dtype: int64</pre>
                     href="http://www.hnms.gr/emy/en/pdf/2020_GRsignificantEVENT_en.pdf">http://www.hnms.gr/emy/en/pdf/2020_GRsignificantEVENT_en.pdf</a>.
                 In page 7 of the report there is a graph showing the mean summer temperature deviation from a baseline
                 of 1971-2000.</p>
-            <p>You will create your own version of the graph, using a baseline of 1974-1999. Your graph should look like
-                the one below. The line that runs through the graph is the 10 years rolling avarege of the deviation
-                from the mean. What is your intepretation of the figure?</p>
-            <p><img src="images/mean_summer_temperature_difference.svg" alt="Mean Summer Temperature Deviation"></p>
+            <p>We will try to create our own version of the graph, using a baseline of 1974-1999. The graph should look like
+                the one below. The line that runs through the graph is the 10 years rolling average of the deviation
+                from the mean. How can we intepret this figure?</p>
+            <p><img src="{{site.baseurl}}/img/posts/weather-assignment/mean_summer_temperature_difference.svg" alt="Mean Summer Temperature Deviation"></p>
 
         </div>
     </div>
@@ -22915,14 +22873,13 @@ Name: TAVG, Length: 65, dtype: float64</pre>
         <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
             <h3 id="Q3:-Evolution-of-Daily-Temperatures">Q3: Evolution of Daily Temperatures<a class="anchor-link"
                     href="#Q3:-Evolution-of-Daily-Temperatures">&#182;</a></h3>
-            <p>You will get the average temperate for each year for the full period from 1955 to 2020. You will then
+            <p>Now, we will get the average temperate for each year for the full period from 1955 to 2020. We then
                 create a plot showing the daily temperature for each year. The line corresponding to each year will be
                 smoothed by using a 30 days rolling average. The lines are colored from light orange to dark orange,
                 progressing through the years in ascending order.</p>
-            <p>On that plot you will overlay a line showing the average daily temperature for the baseline period of
-                1974-1999 (that is the black line). The line will also be smoothed usng a 30 years rolling average. What
-                is your interpretation of the figure?</p>
-            <p><img src="images/daily_average_temperature.svg" alt="Daily Average Temperature per Year"></p>
+            <p>On that plot we overlay a line showing the average daily temperature for the baseline period of
+                1974-1999 (that is the black line). The line will also be smoothed usng a 30 years rolling average. How can we interpret this figure?</p>
+            <p><img src="{{site.baseurl}}/img/posts/weather-assignment/daily_average_temperature.svg" alt="Daily Average Temperature per Year"></p>
 
         </div>
     </div>
@@ -23515,16 +23472,16 @@ Name: TAVG, Length: 65, dtype: float64</pre>
         <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
             <h3 id="Q4:-Extreme-Temperature-Events">Q4: Extreme Temperature Events<a class="anchor-link"
                     href="#Q4:-Extreme-Temperature-Events">&#182;</a></h3>
-            <p>Another mesure used by climatologists is the number of extreme events. Extreme events are defined as
+            <p>Another measure used by climatologists is the number of extreme events. Extreme events are defined as
                 those beyond 5% or 10% from the expected value. We will deal with extreme heat events going 10% above
                 the baseline.</p>
-            <p>You will count the number of extreme temperature events per year, compared to the baseline of 1974-1999.
-                You should should produce a graph like the one that follows. The vertical axis is the percentage of
+            <p>We will count the number of extreme temperature events per year, compared to the baseline of 1974-1999.
+                We should be able to produce a graph like the one that follows. The vertical axis is the percentage of
                 extreme heat events calculated over the number of observations for each year. The gray line in the
                 middle is the average percentage of extreme tempearture events of the baseline. The colour blue is used
-                for those years where the percentage is below the baseline; otherwise the colour is orange. What is your
-                interpretation of the graph?</p>
-            <p><img src="images/extreme_temperature_events.svg" alt="Extreme Temperature Events"></p>
+                for those years where the percentage is below the baseline; otherwise the colour is orange. How can we
+                interpret this graph?</p>
+            <p><img src="{{site.baseurl}}/img/posts/weather-assignment/extreme_temperature_events.svg" alt="Extreme Temperature Events"></p>
 
         </div>
     </div>
@@ -23895,12 +23852,12 @@ Name: TAVG, Length: 65, dtype: float64</pre>
             <h3 id="Q5:-Precipitation">Q5: Precipitation<a class="anchor-link" href="#Q5:-Precipitation">&#182;</a></h3>
             <p>Continuing the thread on extreme events, another consideration is rainfall. The weather may or may not be
                 drying up. We are, however, interested in whether precipication becomes more intense over time.</p>
-            <p>To see that, you will count the overall rainfall over the year and the number of rainy days in each year.
-                Then, by dividing the rainfall by the number of rainy days you will get an indication of whether we are
-                getting rain in more concentrated bursts. You will then create a plot showing the ratio of rainfall over
-                rainy days over the years. On the plot you will overlay the 10 years rolling average. The plot should be
-                similar to the one below. What is your interpretation of the plot?</p>
-            <p><img src="images/precipitation.svg" alt="Yearly Precipition Concentration"></p>
+            <p>To see that, we will count the overall rainfall over the year and the number of rainy days in each year.
+                Then, by dividing the rainfall by the number of rainy days we will get an indication of whether we are
+                getting rain in more concentrated bursts. We will then create a plot showing the ratio of rainfall over
+                rainy days over the years. On the plot we will overlay the 10 years rolling average. The plot should be
+                similar to the one below. How can we interpret this plot?</p>
+            <p><img src="{{site.baseurl}}/img/posts/weather-assignment/precipitation.svg" alt="Yearly Precipition Concentration"></p>
 
         </div>
     </div>
